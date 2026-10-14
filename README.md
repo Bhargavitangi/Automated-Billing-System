@@ -22,3 +22,11 @@ This project is suitable for small businesses, retail shops, and educational pur
 In the future, the system can be enhanced with user login, customer management, advanced sales reports, payment tracking, GST invoice customization, and additional security features. Overall, the Automated Billing System provides an effective foundation for digital billing and inventory management, helping businesses improve productivity, maintain organized records, and deliver better customer service.
 
 OUTPUT:
+
+<img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/f8c1753f-674c-4600-80c0-124ba2c1c6a8" />
+
+<img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/982185cb-75d7-4e43-8e78-b46e61032e19" />
+
+<img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/764e6ea5-fc1d-4303-aade-db3d8deecc55" />
+
+<img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/ff9c10dc-4b9d-47b0-82e4-ada70f4f8df9" />
