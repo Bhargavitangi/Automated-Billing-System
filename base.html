@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}BillWise{% endblock %} · Automated Billing</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="{{ url_for('dashboard') }}"><span class="brand-mark">B</span><span>BillWise<small>Automated Billing</small></span></a>
+    <nav>
+      <a href="{{ url_for('dashboard') }}" class="{{ 'active' if request.endpoint == 'dashboard' else '' }}">▦ <span>Dashboard</span></a>
+      <a href="{{ url_for('billing') }}" class="{{ 'active' if request.endpoint == 'billing' else '' }}">＋ <span>Create bill</span></a>
+      <a href="{{ url_for('products') }}" class="{{ 'active' if request.endpoint == 'products' else '' }}">▤ <span>Products & stock</span></a>
+      <a href="{{ url_for('invoices') }}" class="{{ 'active' if request.endpoint in ['invoices','invoice_detail'] else '' }}">▧ <span>Invoice history</span></a>
+    </nav>
+    <div class="sidebar-foot"><span class="status-dot"></span> Local database connected</div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><span class="eyebrow">BILLING WORKSPACE</span><h1>{% block page_title %}Dashboard{% endblock %}</h1></div><div class="topbar-right"><span class="today">{{ now_label if now_label else "Store management" }}</span><span class="avatar">BW</span></div></header>
+    <section class="content">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}<div class="flash-wrap">{% for category, message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </section>
+    <footer>BillWise · Demo project · Keep backups of your billing data</footer>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
